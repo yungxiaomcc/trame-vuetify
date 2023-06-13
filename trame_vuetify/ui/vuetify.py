@@ -82,33 +82,33 @@ class SinglePageLayout(VAppLayout):
                     classes="ml-n3 mr-1",
                 ),
                 footer.add_child(
-                    '<a href="https://kitware.github.io/trame/" class="grey--text lighten-1--text text-caption text-decoration-none" target="_blank">Powered by trame</a>'
+                    '<a href="https://xuelangyun.com/" class="grey--text lighten-1--text text-caption text-decoration-none" target="_blank">Powered by 雪浪云</a>'
                 )
                 vuetify.VSpacer()
                 reload = self.server.controller.on_server_reload
-                if reload.exists():
-                    with vuetify.VBtn(
-                        x_small=True,
-                        icon=True,
-                        click=self.on_server_reload,
-                        classes="mx-2",
-                    ):
-                        vuetify.VIcon("mdi-autorenew", x_small=True)
+                # if reload.exists():
+                #     with vuetify.VBtn(
+                #         x_small=True,
+                #         icon=True,
+                #         click=self.on_server_reload,
+                #         classes="mx-2",
+                #     ):
+                #         vuetify.VIcon("mdi-autorenew", x_small=True)
 
-                with vuetify.VTooltip(top=True):
-                    with vuetify.Template(v_slot_activator="{on, attrs}"):
-                        vuetify.VIcon(
-                            "mdi-help-circle",
-                            x_small=True,
-                            classes="mr-4",
-                            v_bind="attrs",
-                            v_on="on",
-                            __properties=[("v_bind", "v-bind"), ("v_on", "v-on")],
-                        )
-                    html.Pre(get_trame_versions())
+                # with vuetify.VTooltip(top=True):
+                #     with vuetify.Template(v_slot_activator="{on, attrs}"):
+                #         vuetify.VIcon(
+                #             "mdi-help-circle",
+                #             x_small=True,
+                #             classes="mr-4",
+                #             v_bind="attrs",
+                #             v_on="on",
+                #             __properties=[("v_bind", "v-bind"), ("v_on", "v-on")],
+                #         )
+                #     html.Pre(get_trame_versions())
 
                 footer.add_child(
-                    '<a href="https://www.kitware.com/" class="grey--text lighten-1--text text-caption text-decoration-none" target="_blank">© 2021 Kitware Inc.</a>'
+                    '<a href="https://xuelangyun.com/" class="grey--text lighten-1--text text-caption text-decoration-none" target="_blank">© 2023 Xuelangyun</a>'
                 )
 
     def on_server_reload(self):
